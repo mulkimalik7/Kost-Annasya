@@ -1,4 +1,4 @@
-const kiki_contactForm = document.getElementById("kiki_contact_form");
+const kiki_contactForm = document.getElementById("kiki_kontak_form");
 
 if (!(kiki_contactForm instanceof HTMLFormElement)) {
     throw new Error("Form Contact Kost Annaysa tidak ditemukan.");
@@ -6,15 +6,11 @@ if (!(kiki_contactForm instanceof HTMLFormElement)) {
 
 // Penghitung karakter pesan
 const kiki_messageField = kiki_contactForm.elements.namedItem("pesan");
-const kiki_messageCounter = document.getElementById("kiki_contact_pesan_counter");
-const kiki_whatsappFallback = document.getElementById("kiki_contact_whatsapp_fallback");
-const kiki_whatsappFallbackLink = kiki_whatsappFallback?.querySelector("a");
+const kiki_messageCounter = document.getElementById("kiki_kontak_pesan_counter");
 
 if (
     !(kiki_messageField instanceof HTMLTextAreaElement) ||
-    !(kiki_messageCounter instanceof HTMLElement) ||
-    !(kiki_whatsappFallback instanceof HTMLParagraphElement) ||
-    !(kiki_whatsappFallbackLink instanceof HTMLAnchorElement)
+    !(kiki_messageCounter instanceof HTMLElement)
 ) {
     throw new Error("Elemen form Contact tidak ditemukan.");
 }
@@ -86,8 +82,6 @@ function kiki_handleContactSubmit(event) {
     const urlWhatsApp =
         `https://wa.me/6285722274021?text=${encodeURIComponent(pesanWhatsApp)}`;
     window.open(urlWhatsApp, "_blank", "noopener,noreferrer");
-    kiki_whatsappFallbackLink.href = urlWhatsApp;
-    kiki_whatsappFallback.hidden = false;
 }
 
 kiki_contactForm.addEventListener("submit", kiki_handleContactSubmit);
