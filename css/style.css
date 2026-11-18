@@ -1,0 +1,832 @@
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: #F7F1E7;
+    color: #49372B;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigasi */
+.kiki_header {
+    width: 100%;
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F7F1E7;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.kiki_logo h2 {
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #49372B;
+}
+
+.kiki_logo span {
+    color: #8B654A;
+}
+
+.kiki_navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 23px;
+}
+
+.kiki_navbar a {
+    text-decoration: none;
+    color: #49372B;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.kiki_navbar a:hover {
+    color: #8B654A;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Beranda */
+.kiki_home {
+    min-height: 70vh;
+    padding: 50px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 45px;
+}
+
+.kiki_home_content {
+    flex: 1;
+}
+
+.kiki_subtitle {
+    color: #8B654A;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+.kiki_home_content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.kiki_home_content h1 span {
+    color: #8B654A;
+}
+
+.kiki_description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #746355;
+
+    max-width: 470px;
+}
+
+.kiki_home_buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.kiki_btn,
+.kiki_btn_outline {
+    padding: 12px 20px;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.kiki_btn {
+    background-color: #8B654A;
+    color: white;
+}
+
+.kiki_btn_outline {
+    border: 1px solid #8B654A;
+    color: #8B654A;
+}
+
+.kiki_home_image {
+    flex: 1;
+}
+
+.kiki_home_image img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Tentang */
+.kiki_about {
+    padding: 72px 7%;
+
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    background-color: #E8D8C3;
+}
+
+.kiki_about_image {
+    flex: 1;
+    position: relative;
+}
+
+.kiki_about_image img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.kiki_image_caption {
+    margin-top: 10px;
+}
+
+.kiki_image_caption p {
+    font-size: 12px;
+    color: #75543D;
+}
+
+.kiki_about_content {
+    flex: 1;
+}
+
+.kiki_about_label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #75543D;
+    margin-bottom: 14px;
+}
+
+.kiki_about_content h2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+
+    color: #49372B;
+    margin-bottom: 18px;
+}
+
+.kiki_about_content h2 span {
+    color: #8B654A;
+}
+
+.kiki_about_text {
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #6B5A4A;
+    margin-bottom: 12px;
+}
+
+.kiki_building_list {
+    margin-top: 20px;
+    border-top: 1px solid #C6AA8E;
+}
+
+.kiki_building_item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #C6AA8E;
+}
+
+.kiki_building_number {
+    font-size: 21px;
+    font-weight: bold;
+    color: #8B654A;
+}
+
+.kiki_building_item h3 {
+    font-size: 16px;
+    color: #49372B;
+    margin-bottom: 5px;
+}
+
+.kiki_building_item p {
+    font-size: 13px;
+    color: #6B5A4A;
+}
+
+/* Fasilitas */
+.kiki_fasilitas {
+    padding: 72px 7%;
+    background-color: #F7F1E7;
+}
+
+.kiki_fasilitas_header {
+    margin-bottom: 30px;
+}
+
+.kiki_fasilitas_header h2 {
+    color: #49372B;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.kiki_fasilitas_header p {
+    color: #746355;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.kiki_fasilitas_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.kiki_fasilitas_card {
+    overflow: hidden;
+    background-color: #FFFCF7;
+    border: 1px solid #E8D8C3;
+    border-radius: 6px;
+}
+
+.kiki_fasilitas_card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.kiki_fasilitas_info {
+    padding: 16px;
+}
+
+.kiki_fasilitas_info h3 {
+    color: #49372B;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.kiki_fasilitas_info p {
+    color: #746355;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Kamar */
+.kiki_kamar {
+    padding: 72px 7%;
+    background-color: #E8D8C3;
+}
+
+.kiki_kamar_header {
+    margin-bottom: 30px;
+}
+
+.kiki_kamar_header h2 {
+    color: #49372B;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.kiki_kamar_header p {
+    color: #6B5A4A;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.kiki_kamar_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.kiki_kamar_card {
+    overflow: hidden;
+    background-color: #FFFCF7;
+    border: 1px solid #D9C3AA;
+    border-radius: 6px;
+}
+
+.kiki_kamar_card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.kiki_kamar_info {
+    padding: 18px;
+}
+
+.kiki_kamar_info h3 {
+    color: #49372B;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.kiki_kamar_info p {
+    color: #746355;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Harga */
+.kiki_harga {
+    padding: 72px 7%;
+    background-color: #F7F1E7;
+}
+
+.kiki_harga_header {
+    margin-bottom: 30px;
+}
+
+.kiki_harga_header h2 {
+    color: #49372B;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.kiki_harga_header p {
+    color: #746355;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.kiki_harga_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.kiki_harga_card {
+    padding: 24px;
+    background-color: #FFFCF7;
+    border: 1px solid #E8D8C3;
+    border-radius: 6px;
+}
+
+.kiki_harga_card h3 {
+    color: #49372B;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.kiki_harga_kapasitas {
+    color: #746355;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.kiki_harga_deskripsi {
+    color: #746355;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.kiki_harga_rincian {
+    border-top: 1px solid #E8D8C3;
+}
+
+.kiki_harga_baris {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    color: #49372B;
+    font-size: 14px;
+    border-bottom: 1px solid #E8D8C3;
+}
+
+.kiki_harga_fasilitas {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kiki_harga_fasilitas li {
+    color: #49372B;
+    font-size: 14px;
+}
+
+.kiki_harga_total {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    color: #49372B;
+    font-size: 15px;
+}
+
+.kiki_harga_total strong {
+    color: #8B654A;
+}
+
+.kiki_harga_contoh {
+    margin-top: 18px;
+    padding: 16px;
+    background-color: #F7F1E7;
+    border-radius: 8px;
+}
+
+.kiki_harga_contoh h4 {
+    margin-bottom: 10px;
+    color: #49372B;
+    font-size: 14px;
+}
+
+.kiki_harga_contoh_daftar {
+    display: grid;
+    gap: 10px;
+}
+
+.kiki_harga_contoh_baris {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    color: #49372B;
+    font-size: 14px;
+}
+
+.kiki_harga_contoh strong {
+    color: #8B654A;
+    font-weight: 600;
+}
+
+/* Peraturan */
+.kiki_peraturan {
+    padding: 72px 7%;
+    background-color: #E8D8C3;
+}
+
+.kiki_peraturan_konten {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.kiki_peraturan_header {
+    margin-bottom: 28px;
+}
+
+.kiki_peraturan_header h2 {
+    color: #49372B;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.kiki_peraturan_header p,
+.kiki_peraturan_persetujuan {
+    color: #6B5A4A;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.kiki_peraturan_daftar {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kiki_peraturan_daftar li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 18px;
+    background-color: #FFFCF7;
+    border: 1px solid #E8D8C3;
+    border-radius: 6px;
+}
+
+.kiki_peraturan_nomor {
+    flex: 0 0 30px;
+    color: #8B654A;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.kiki_peraturan_daftar li p {
+    color: #49372B;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.kiki_peraturan_peringatan {
+    margin-top: 22px;
+    padding: 16px 18px;
+    color: #49372B;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.65;
+    background-color: #F7F1E7;
+    border-left: 4px solid #8B654A;
+    border-radius: 4px;
+}
+
+.kiki_peraturan_persetujuan {
+    margin-top: 16px;
+}
+
+/* Kontak */
+.kiki_contact {
+    padding: 72px 7%;
+    background-color: #F7F1E7;
+}
+
+.kiki_contact_konten {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.kiki_contact_header {
+    margin-bottom: 28px;
+}
+
+.kiki_contact_header h2 {
+    color: #49372B;
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.kiki_contact_header p,
+.kiki_contact_item p {
+    color: #746355;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.kiki_contact_detail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.kiki_contact_item {
+    padding: 20px;
+    background-color: #FFFCF7;
+    border: 1px solid #E8D8C3;
+    border-radius: 6px;
+}
+
+.kiki_contact_item h3 {
+    color: #49372B;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.kiki_contact_form {
+    width: 100%;
+    padding: 20px;
+    background-color: #FFFCF7;
+    border: 1px solid #E8D8C3;
+    border-radius: 6px;
+}
+
+.kiki_contact_form_row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.kiki_contact_form_group {
+    margin-bottom: 16px;
+}
+
+.kiki_contact_form_group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #49372B;
+    font-size: 14px;
+}
+
+.kiki_contact_form_group input,
+.kiki_contact_form_group textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    color: #49372B;
+    font: inherit;
+    background-color: #FFFCF7;
+    border: 1px solid #C6AA8E;
+    border-radius: 4px;
+}
+
+.kiki_contact_form_group input::placeholder,
+.kiki_contact_form_group textarea::placeholder {
+    color: #746355;
+    opacity: 1;
+}
+
+.kiki_contact_form_group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.kiki_contact_pesan_counter {
+    display: block;
+    margin-top: 6px;
+    color: #746355;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: right;
+}
+
+.kiki_contact_tombol {
+    display: inline-block;
+    padding: 13px 20px;
+    border: none;
+    color: #FFFCF7;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #8B654A;
+    border-radius: 6px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.kiki_contact_whatsapp_fallback {
+    margin-top: 16px;
+    color: #746355;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.kiki_contact_whatsapp_fallback a {
+    color: #8B654A;
+    font-weight: bold;
+}
+
+/* Bagian bawah */
+.kiki_footer {
+    padding: 20px 7%;
+    color: #F7F1E7;
+    font-size: 14px;
+    text-align: center;
+    background-color: #49372B;
+}
+
+/* Tata letak responsif */
+@media (max-width: 900px) {
+    .kiki_header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .kiki_navbar {
+        width: 100%;
+        justify-content: center;
+        column-gap: 18px;
+    }
+
+    .kiki_home {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 7%;
+    }
+
+    .kiki_about {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .kiki_about_image img {
+        height: 280px;
+    }
+
+    .kiki_about_content h2 {
+        font-size: 28px;
+    }
+
+    .kiki_fasilitas_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .kiki_kamar {
+        padding: 56px 7%;
+    }
+
+    .kiki_kamar_header h2 {
+        font-size: 28px;
+    }
+
+    .kiki_kamar_grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .kiki_kamar_card img {
+        height: 240px;
+    }
+
+    .kiki_harga {
+        padding: 56px 7%;
+    }
+
+    .kiki_harga_header h2 {
+        font-size: 28px;
+    }
+
+    .kiki_harga_grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    .kiki_fasilitas {
+        padding: 56px 7%;
+    }
+
+    .kiki_fasilitas_header h2,
+    .kiki_peraturan_header h2,
+    .kiki_contact_header h2 {
+        font-size: 28px;
+    }
+
+    .kiki_fasilitas_grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .kiki_peraturan {
+        padding: 56px 7%;
+    }
+
+    .kiki_peraturan_daftar li {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .kiki_contact {
+        padding: 56px 7%;
+    }
+
+    .kiki_contact_detail {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .kiki_contact_form {
+        padding: 16px;
+    }
+
+    .kiki_contact_form_row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .kiki_contact_tombol {
+        width: 100%;
+        text-align: center;
+    }
+}
