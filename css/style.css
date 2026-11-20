@@ -522,11 +522,12 @@ body {
 }
 
 .kiki_peraturan_daftar {
-    display: grid;
-    gap: 10px;
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: #FFFCF7;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .kiki_peraturan_daftar li {
@@ -534,9 +535,10 @@ body {
     align-items: flex-start;
     gap: 16px;
     padding: 16px 18px;
-    background-color: #FFFCF7;
-    border: 1px solid #E8D8C3;
-    border-radius: 6px;
+}
+
+.kiki_peraturan_daftar li + li {
+    border-top: 1px solid #E8D8C3;
 }
 
 .kiki_peraturan_nomor {
@@ -547,6 +549,7 @@ body {
 }
 
 .kiki_peraturan_daftar li p {
+    min-width: 0;
     color: #49372B;
     font-size: 15px;
     line-height: 1.65;
